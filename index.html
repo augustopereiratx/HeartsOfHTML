@@ -17,7 +17,7 @@
           <h1 class="h1">Hearts of HTML</h1>
           <button
             class="main-button"
-            onclick="document.getElementById('under-development').style.display = 'none';document.getElementById('menu-contents').style.display = 'inline-block';document.getElementById('menu-music').play();"
+            onclick="document.getElementById('under-development').style.display = 'none';document.getElementById('menu-contents').style.display = 'inline-block';document.getElementById('menu-music').play();document.getElementById('menu-click-open').play();"
           >
             Ok
           </button>
@@ -26,16 +26,22 @@
           <h1 class="h1">Hearts of HTML</h1>
           <button
             class="main-button"
-            onclick="window.location.href='game.html'"
+            onclick="newGame()"
           >
             New Game
           </button>
           <button
             class="main-button"
-            onclick="window.location.href='game.html'"
+            onclick="newGame()"
           >
             Load Game
           </button>
+          <script>
+            function newGame(){
+              document.getElementById('menu-click-open').play();
+              setTimeout(function(){ window.location.href="game.html"; }, 750);
+            }
+          </script>
           <div class="social-media">
             <div class="social-logo">
               <img
@@ -58,6 +64,7 @@
         </div>
       </div>
     </div>
-    <audio control loop autoplay src="resources/music/hoi4_main_theme.mp3" id="menu-music"></audio>
+    <audio control loop autoplay src="music/hoi4_main_theme.mp3" id="menu-music"></audio>
+    <audio control autoplay src="sounds/click_menu.wav" id="menu-click-open"></audio>
   </body>
 </html>
