@@ -12,6 +12,16 @@
     <div id="menu-background">
       <div id="main-menu">
         <br />
+        <div id="under-development">
+          <h1 class="h1">This is still under very early development!!!</h1>
+          <h1 class="h1">Hearts of HTML</h1>
+          <button
+            class="main-button"
+            onclick="document.getElementById('under-development').style.display = 'none';document.getElementById('menu-contents').style.display = 'inline-block';document.getElementById('menu-music').play();"
+          >
+            Ok
+          </button>
+        </div>
         <div id="menu-contents">
           <h1 class="h1">Hearts of HTML</h1>
           <button
@@ -32,10 +42,11 @@
                 src="https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/08/Reddit-logo.png"
                 class="social-image"
               />
-              <img
+              <a href="https://t.me/Hearts_Of_HTML"><img
                 src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo.png"
                 class="social-image"
-              />
+                onclick="window.location.href='t.me/Hearts_Of_HTML'"
+              /></a>
               <br />
               <p
                 style="text-align: center; color: #eeeeee; font-family: 'Fredericka the Great', cursive;"
@@ -47,5 +58,6 @@
         </div>
       </div>
     </div>
+    <audio control loop autoplay src="resources/music/hoi4_main_theme.mp3" id="menu-music"></audio>
   </body>
 </html>
