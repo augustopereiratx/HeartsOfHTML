@@ -1,82 +1,66 @@
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <script type="text/javavascript" src="js/main-menu.js"></script>
-  </head>
-  <body>
-    <div id="menu-background">
-      <div id="main-menu">
-        <br />
-        <div id="under-development">
-          <h1 class="h1">This is still under very early development!!!</h1>
-          <button
-            class="main-button"
-            onclick="document.getElementById('under-development').style.display = 'none';document.getElementById('menu-contents').style.display = 'inline-block';document.getElementById('menu-music').play();document.getElementById('menu-click-open').play();"
-          >
-            Ok
-          </button>
-        </div>
-        <div id="menu-contents">
-          <h1 class="h1">Hearts of HTML</h1>
-          <button
-            class="main-button"
-            onclick="newGame()"
-          >
-            New Game
-          </button>
-          <button
-            class="main-button"
-            onclick="newGame()"
-          >
-            Load Game
-          </button>
-          <script>
-            function newGame(){
-              document.getElementById('menu-click-open').play();
-              setTimeout(function(){ window.location.href="game.html"; }, 750);
-            }
-          </script>
-          <button
-            class="main-button"
-            onclick="devPage()"
-          >
-            Developer Page
-          </button>
-          <script>
-            function devPage(){
-              document.getElementById('menu-click-open').play();
-              setTimeout(function(){ window.location.href="dev/dev-page.html"; }, 750);
-            }
-          </script>
-          <div class="social-media">
-            <div class="social-logo">
-              <img
-                src="https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"
-                class="social-image"
-                onclick="window.location.href='https:/' + '/discord.gg/TNsHhb'"
-              />
-              <a href="https://t.me/Hearts_Of_HTML"><img
-                src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo.png"
-                class="social-image"
-                onclick="window.location.href='t.me/Hearts_Of_HTML'"
-              /></a>
-              <br />
-              <p
-                style="text-align: center; color: #eeeeee; font-family: 'Fredericka the Great', cursive;"
-              >
-                Developed by Augusto Teixeira<br>Sounds and Music by Paradox Interactive
-              </p>
-            </div>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:wght@300;500&display=swap"
+    rel="stylesheet" />
+  <script type="text/javavascript" src="js/main-menu.js"></script>
+</head>
+
+<body>
+  <div id="menu-background">
+    <div id="main-menu">
+      <br />
+      <div id="under-development">
+        <h1 class="h1">This is still under very early development!!!</h1>
+        <button class="main-button"
+          onclick="document.getElementById('under-development').style.display = 'none';document.getElementById('menu-contents').style.display = 'inline-block';document.getElementById('menu-music').play();document.getElementById('menu-click-open').play();">
+          Ok
+        </button>
+      </div>
+      <div id="menu-contents">
+        <h1 class="h1">Hearts of HTML</h1>
+        <button class="main-button" onclick="newGame()">
+          New Game
+        </button>
+        <button class="main-button" onclick="newGame()">
+          Load Game
+        </button>
+        <script>
+          function newGame() {
+            document.getElementById('menu-click-open').play();
+            setTimeout(function () { window.location.href = "game.html"; }, 750);
+          }
+        </script>
+        <button class="main-button" onclick="devPage()">
+          Developer Page
+        </button>
+        <script>
+          function devPage() {
+            document.getElementById('menu-click-open').play();
+            setTimeout(function () { window.location.href = "dev/dev-page.html"; }, 750);
+          }
+        </script>
+        <div class="social-media">
+          <div class="social-logo">
+            <img src="https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"
+              class="social-image" onclick="window.location.href='https:/' + '/discord.gg/TNsHhb'" />
+            <a href="https://t.me/Hearts_Of_HTML"><img
+                src="https://logodownload.org/wp-content/uploads/2017/11/telegram-logo.png" class="social-image"
+                onclick="window.location.href='t.me/Hearts_Of_HTML'" /></a>
+            <br />
+            <p style="text-align: center; color: #eeeeee; font-family: 'Fredericka the Great', cursive;">
+              Developed by Augusto Teixeira<br>Sounds and Music by Paradox Interactive
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <audio control loop autoplay src="music/main_theme.mp3" id="menu-music"></audio>
-    <audio control autoplay src="sounds/click_menu.wav" id="menu-click-open"></audio>
-  </body>
+  </div>
+  <audio control loop autoplay src="music/main_theme.mp3" id="menu-music"></audio>
+  <audio control autoplay src="sounds/click_menu.wav" id="menu-click-open"></audio>
+</body>
+
 </html>
